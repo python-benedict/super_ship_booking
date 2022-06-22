@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    .container{
+        display: flex;
+        justify-content: space-around;
+        height: 60px;
+        font-size: 30px;
+        width: 100%;
+        background-color: cyan;
+        border: 1px solid black;
+    }
+    .div{
+        margin: 5px;
+    }
+    .div a{
+        text-align: center;
+        text-decoration: none;
+    }
+</style>    
+
+<div class='container'>
+    <div class="div"><a href="/">Home</a></div>
+    <div class="div"><a href="/register/">Register Pasenger</a></div>
+    <div class="div"><a href="/passengerList/">List Pasenger</a></div>
+
+</div>
+{% endblock %}

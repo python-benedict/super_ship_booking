@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% include 'navbar.html'   %}
+    <div>
+        
+            <!-- {{form}}<br> -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Human</th>
+                        <th>Martian</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for form in form %}
+                    <tr>
+                        <div>
+                            <td>{{form.name}}</td>
+                            <td>{{form.human}}</td>
+                            <td>{{form.martial}}</td>
+                            <td><a href="{% url 'update' form.id %}">Update</a></td>
+                            <td><a href="{% url 'delete' form.id %}">Delete</a></td>
+                        </div>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        {% endfor %}
+    </div>
+{% endblock %}
